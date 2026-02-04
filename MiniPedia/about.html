@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="درباره مینی‌پدیا - دانشنامه جامع مد و استایل مردانه، ماموریت ما و تیم متخصص">
+    <meta name="keywords" content="مینی‌پدیا, درباره ما, مد, استایل مردانه, تیم مینی‌پدیا">
+    <meta name="author" content="تیم مینی‌پدیا">
+    <meta property="og:title" content="درباره ما | مینی‌پدیا">
+    <meta property="og:description" content="دانشنامه جامع مد و استایل مردانه">
+    <meta property="og:type" content="website">
+    <title>درباره ما | مینی‌پدیا</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { 50: '#fdf2f8', 100: '#fce7f3', 200: '#fbcfe8', 300: '#f9a8d4', 400: '#f472b6', 500: '#ec4899', 600: '#db2777', 700: '#be185d', 800: '#9d174d', 900: '#831843' },
+                        secondary: { 50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd', 400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a' },
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-out',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        slideUp: { '0%': { transform: 'translateY(20px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="custom.css">
+</head>
+<body class="bg-gradient-to-br from-pink-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-lg shadow-pink-100/50 dark:shadow-none transition-all duration-300">
+        <nav class="container mx-auto px-4 py-4" aria-label="ناوبری اصلی">
+            <div class="flex items-center justify-between">
+                <a href="blog.html" class="flex items-center gap-2 group" aria-label="مینی‌پدیا - صفحه اصلی">
+                    <div class="w-10 h-10 bg-gradient-to-br from-pink-400 to-blue-400 rounded-xl flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300 shadow-lg shadow-pink-200">
+                        <span class="text-white text-xl font-bold">👔</span>
+                    </div>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">مینی‌پدیا</span>
+                </a>
+
+                <div class="hidden md:flex items-center gap-1">
+                    <a href="blog.html" class="px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-pink-50 dark:hover:bg-gray-700 font-medium transition-all duration-300 hover:scale-105">صفحه اصلی</a>
+                    <a href="article-1.html" class="px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-pink-50 dark:hover:bg-gray-700 font-medium transition-all duration-300 hover:scale-105">لباس تابستانی</a>
+                    <a href="article-2.html" class="px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-pink-50 dark:hover:bg-gray-700 font-medium transition-all duration-300 hover:scale-105">راهنمای سایز</a>
+                    <a href="about.html" class="px-4 py-2 rounded-lg bg-gradient-to-r from-pink-100 to-blue-100 dark:from-pink-900/30 dark:to-blue-900/30 text-pink-600 dark:text-pink-400 font-medium transition-all duration-300 hover:scale-105" aria-current="page">درباره ما</a>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <button id="dark-mode-toggle" class="p-2 rounded-lg bg-pink-100 dark:bg-gray-700 hover:bg-pink-200 dark:hover:bg-gray-600 transition-all duration-300 hover:scale-110" aria-label="تغییر حالت تاریک/روشن">
+                        <span id="theme-icon" class="text-xl">🌙</span>
+                    </button>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg bg-pink-100 dark:bg-gray-700" aria-label="منوی موبایل" aria-expanded="false">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-pink-200 dark:border-gray-700 pt-4">
+                <a href="blog.html" class="block px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-pink-50 dark:hover:bg-gray-700 font-medium">صفحه اصلی</a>
+                <a href="article-1.html" class="block px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-pink-50 dark:hover:bg-gray-700 font-medium mt-1">لباس تابستانی</a>
+                <a href="article-2.html" class="block px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-pink-50 dark:hover:bg-gray-700 font-medium mt-1">راهنمای سایز</a>
+                <a href="about.html" class="block px-4 py-2 rounded-lg bg-gradient-to-r from-pink-100 to-blue-100 dark:from-pink-900/30 dark:to-blue-900/30 text-pink-600 dark:text-pink-400 font-medium mt-1" aria-current="page">درباره ما</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden" aria-label="معرفی صفحه">
+            <div class="absolute inset-0 bg-gradient-to-br from-green-300 via-teal-300 to-cyan-300 dark:from-green-900/50 dark:via-teal-900/50 dark:to-cyan-900/50"></div>
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.2"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
+            <div class="container mx-auto px-4 py-20 relative">
+                <div class="text-center max-w-3xl mx-auto animate-fade-in">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-6 drop-shadow-lg">درباره مینی‌پدیا</h1>
+                    <p class="text-xl text-gray-700 dark:text-gray-200">دانشنامه جامع مد و استایل مردانه</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Content -->
+        <section class="container mx-auto px-4 py-16" aria-label="محتوای درباره ما">
+            <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-lg shadow-pink-100/50 dark:shadow-none p-8 md:p-12 animate-slide-up">
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6 pb-2 border-b-2 border-pink-200 dark:border-pink-800">ماموریت ما</h2>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+                    مینی‌پدیا با هدف ایجاد یک منبع جامع و معتبر برای دنیای مد و استایل مردانه تأسیس شده است. 
+                    ما معتقدیم که هر مردی می‌تواند با دانش درست، استایلی منحصر به فرد و جذاب داشته باشد. 
+                    تیم ما متعهد است مقالات آموزنده، دقیق و کاربردی را در اختیار شما قرار دهد.
+                </p>
+
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6 pb-2 border-b-2 border-pink-200 dark:border-pink-800">چرا مینی‌پدیا؟</h2>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                    در دنیای مد که هر روز تغییر می‌کند، داشتن یک منبع معتبر و به‌روز بسیار ارزشمند است. 
+                    مینی‌پدیا با تمرکز بر کیفیت محتوا و کاربردی بودن اطلاعات، تلاش می‌کند تا مرجعی قابل اعتماد 
+                    برای علاقه‌مندان به مد و استایل مردانه باشد.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="p-6 bg-gradient-to-br from-pink-50 to-pink-100 dark:from-pink-900/20 dark:to-pink-800/20 rounded-2xl">
+                        <div class="w-12 h-12 bg-gradient-to-br from-pink-400 to-pink-500 rounded-xl flex items-center justify-center text-white text-2xl mb-4 shadow-lg">✅</div>
+                        <h3 class="text-lg font-bold text-gray-800 dark:text-white mb-2">محتوای معتبر</h3>
+                        <p class="text-gray-600 dark:text-gray-400">تمامی مقالات توسط متخصصان مد تهیه و بازبینی می‌شوند</p>
+                    </div>
+                    <div class="p-6 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-2xl">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-500 rounded-xl flex items-center justify-center text-white text-2xl mb-4 shadow-lg">🔄</div>
+                        <h3 class="text-lg font-bold text-gray-800 dark:text-white mb-2">به‌روزرسانی مداوم</h3>
+                        <p class="text-gray-600 dark:text-gray-400">مقالات به صورت منظم با جدیدترین ترندها به‌روز می‌شوند</p>
+                    </div>
+                    <div class="p-6 bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-2xl">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-500 rounded-xl flex items-center justify-center text-white text-2xl mb-4 shadow-lg">📝</div>
+                        <h3 class="text-lg font-bold text-gray-800 dark:text-white mb-2">زبان ساده</h3>
+                        <p class="text-gray-600 dark:text-gray-400">ارائه مفاهیم پیچیده مد به زبان ساده و قابل فهم</p>
+                    </div>
+                    <div class="p-6 bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 rounded-2xl">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-500 rounded-xl flex items-center justify-center text-white text-2xl mb-4 shadow-lg">🆓</div>
+                        <h3 class="text-lg font-bold text-gray-800 dark:text-white mb-2">رایگان</h3>
+                        <p class="text-gray-600 dark:text-gray-400">دسترسی رایگان به تمامی محتوا برای همه</p>
+                    </div>
+                </div>
+
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6 pb-2 border-b-2 border-pink-200 dark:border-pink-800">تیم ما</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="text-center p-6 bg-pink-50 dark:bg-gray-700 rounded-2xl">
+                        <div class="w-20 h-20 bg-gradient-to-br from-pink-400 to-blue-400 rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-4 shadow-lg">👨‍💼</div>
+                        <h4 class="text-lg font-bold text-gray-800 dark:text-white mb-1">امیر محمدی</h4>
+                        <p class="text-gray-500 dark:text-gray-400">مدیر محتوا و استایلیست</p>
+                    </div>
+                    <div class="text-center p-6 bg-pink-50 dark:bg-gray-700 rounded-2xl">
+                        <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-4 shadow-lg">👩‍💼</div>
+                        <h4 class="text-lg font-bold text-gray-800 dark:text-white mb-1">نازنین کریمی</h4>
+                        <p class="text-gray-500 dark:text-gray-400">نویسنده ارشد مد</p>
+                    </div>
+                    <div class="text-center p-6 bg-pink-50 dark:bg-gray-700 rounded-2xl">
+                        <div class="w-20 h-20 bg-gradient-to-br from-green-400 to-teal-400 rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-4 shadow-lg">👨‍🎨</div>
+                        <h4 class="text-lg font-bold text-gray-800 dark:text-white mb-1">رضا احمدی</h4>
+                        <p class="text-gray-500 dark:text-gray-400">طراح مد و استایل</p>
+                    </div>
+                </div>
+
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6 pb-2 border-b-2 border-pink-200 dark:border-pink-800">منابع</h2>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+                    اطلاعات ارائه شده در مینی‌پدیا از منابع معتبر بین‌المللی، مجلات تخصصی مد، 
+                    و تجربه متخصصان حوزه استایل جمع‌آوری شده است.
+                </p>
+                <ul class="space-y-2 mr-6 mb-8">
+                    <li class="text-gray-600 dark:text-gray-300 flex items-start gap-2">
+                        <span class="text-pink-500 mt-1">•</span>
+                        <span>مجلات معتبر مد بین‌المللی</span>
+                    </li>
+                    <li class="text-gray-600 dark:text-gray-300 flex items-start gap-2">
+                        <span class="text-pink-500 mt-1">•</span>
+                        <span>هفته‌های مد معتبر جهان</span>
+                    </li>
+                    <li class="text-gray-600 dark:text-gray-300 flex items-start gap-2">
+                        <span class="text-pink-500 mt-1">•</span>
+                        <span>کتاب‌های تخصصی استایل و مد</span>
+                    </li>
+                    <li class="text-gray-600 dark:text-gray-300 flex items-start gap-2">
+                        <span class="text-pink-500 mt-1">•</span>
+                        <span>وب‌سایت‌های معتبر خبری مد</span>
+                    </li>
+                </ul>
+
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6 pb-2 border-b-2 border-pink-200 dark:border-pink-800">تماس با ما</h2>
+                <div class="p-6 bg-gradient-to-r from-pink-50 to-blue-50 dark:from-pink-900/20 dark:to-blue-900/20 rounded-2xl">
+                    <ul class="space-y-3">
+                        <li class="text-gray-600 dark:text-gray-300 flex items-center gap-3">
+                            <span class="text-xl">📧</span>
+                            <span>info@ministyle.com</span>
+                        </li>
+                        <li class="text-gray-600 dark:text-gray-300 flex items-center gap-3">
+                            <span class="text-xl">📱</span>
+                            <span>۰۲۱-۱۲۳۴۵۶۷۸</span>
+                        </li>
+                        <li class="text-gray-600 dark:text-gray-300 flex items-center gap-3">
+                            <span class="text-xl">📍</span>
+                            <span>تهران، خیابان انقلاب</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Links -->
+                <nav class="mt-8 p-6 bg-gradient-to-r from-pink-50 to-blue-50 dark:from-pink-900/20 dark:to-blue-900/20 rounded-2xl" aria-label="لینک‌های مرتبط">
+                    <h4 class="font-bold text-gray-800 dark:text-white mb-4">لینک‌های مرتبط:</h4>
+                    <ul class="space-y-2">
+                        <li><a href="blog.html" class="text-pink-500 hover:text-pink-600 flex items-center gap-2 transition-colors">→ صفحه اصلی وبلاگ</a></li>
+                        <li><a href="article-1.html" class="text-pink-500 hover:text-pink-600 flex items-center gap-2 transition-colors">→ راهنمای لباس تابستانی</a></li>
+                        <li><a href="article-2.html" class="text-pink-500 hover:text-pink-600 flex items-center gap-2 transition-colors">→ راهنمای سایز لباس</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-pink-100 to-blue-100 dark:from-gray-900 dark:to-gray-800 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-pink-400 to-blue-400 rounded-xl flex items-center justify-center">
+                            <span class="text-white text-xl font-bold">👔</span>
+                        </div>
+                        <span class="text-2xl font-bold bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">مینی‌پدیا</span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400">دانشنامه جامع مد و استایل مردانه</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-gray-800 dark:text-white">لینک‌های سریع</h4>
+                    <ul class="space-y-2">
+                        <li><a href="blog.html" class="text-gray-600 dark:text-gray-400 hover:text-pink-500 transition-colors">صفحه اصلی</a></li>
+                        <li><a href="article-1.html" class="text-gray-600 dark:text-gray-400 hover:text-pink-500 transition-colors">لباس تابستانی</a></li>
+                        <li><a href="article-2.html" class="text-gray-600 dark:text-gray-400 hover:text-pink-500 transition-colors">راهنمای سایز</a></li>
+                        <li><a href="about.html" class="text-gray-600 dark:text-gray-400 hover:text-pink-500 transition-colors">درباره ما</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-gray-800 dark:text-white">تماس با ما</h4>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                        <li>📧 info@ministyle.com</li>
+                        <li>📱 ۰۲۱-۱۲۳۴۵۶۷۸</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-gray-800 dark:text-white">مقالات مرتبط</h4>
+                    <ul class="space-y-2">
+                        <li><a href="article-1.html" class="text-gray-600 dark:text-gray-400 hover:text-pink-500 transition-colors">راهنمای لباس تابستانی</a></li>
+                        <li><a href="article-2.html" class="text-gray-600 dark:text-gray-400 hover:text-pink-500 transition-colors">راهنمای سایز لباس</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-pink-200 dark:border-gray-700 mt-8 pt-8 text-center text-gray-600 dark:text-gray-400">
+                <p>تمامی حقوق محفوظ است © ۲۰۲۴ مینی‌پدیا</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

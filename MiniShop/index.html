@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مینی شاپ - فروشگاه لباس و اکسسوری مردانه">
+    <title>مینی شاپ | لباس و اکسسوری مردانه</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { 50: '#fdf2f8', 100: '#fce7f3', 200: '#fbcfe8', 300: '#f9a8d4', 400: '#f472b6', 500: '#ec4899', 600: '#db2777', 700: '#be185d', 800: '#9d174d', 900: '#831843' },
+                        secondary: { 50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd', 400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a' },
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-out',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        slideUp: { '0%': { transform: 'translateY(20px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+                        float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } },
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-gradient-to-br from-pink-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300 min-h-screen">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-lg shadow-pink-100/50 dark:shadow-none transition-all duration-300">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <div class="w-10 h-10 bg-gradient-to-br from-pink-400 to-blue-400 rounded-xl flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300 shadow-lg shadow-pink-200">
+                        <span class="text-white text-xl font-bold">👔</span>
+                    </div>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">مینی شاپ</span>
+                </a>
+
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center gap-1">
+                    <a href="index.html" class="px-4 py-2 rounded-lg bg-gradient-to-r from-pink-100 to-blue-100 dark:from-pink-900/30 dark:to-blue-900/30 text-pink-600 dark:text-pink-400 font-medium transition-all duration-300 hover:scale-105">خانه</a>
+                    <a href="index.html#products" class="px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-pink-50 dark:hover:bg-gray-700 font-medium transition-all duration-300 hover:scale-105">محصولات</a>
+                    <a href="cart.html" class="px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-pink-50 dark:hover:bg-gray-700 font-medium transition-all duration-300 hover:scale-105 flex items-center gap-2">
+                        سبد خرید
+                        <span id="cart-badge" class="bg-gradient-to-r from-pink-500 to-blue-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center animate-bounce">0</span>
+                    </a>
+                    <a href="blog.html" class="px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-pink-50 dark:hover:bg-gray-700 font-medium transition-all duration-300 hover:scale-105">وبلاگ</a>
+                </div>
+
+                <!-- Dark Mode Toggle & Mobile Menu -->
+                <div class="flex items-center gap-3">
+                    <button id="dark-mode-toggle" class="p-2 rounded-lg bg-pink-100 dark:bg-gray-700 hover:bg-pink-200 dark:hover:bg-gray-600 transition-all duration-300 hover:scale-110">
+                        <span id="theme-icon" class="text-xl">🌙</span>
+                    </button>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg bg-pink-100 dark:bg-gray-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-pink-200 dark:border-gray-700 pt-4">
+                <a href="index.html" class="block px-4 py-2 rounded-lg bg-gradient-to-r from-pink-100 to-blue-100 dark:from-pink-900/30 dark:to-blue-900/30 text-pink-600 dark:text-pink-400 font-medium">خانه</a>
+                <a href="index.html#products" class="block px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-pink-50 dark:hover:bg-gray-700 font-medium mt-1">محصولات</a>
+                <a href="cart.html" class="block px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-pink-50 dark:hover:bg-gray-700 font-medium mt-1">سبد خرید</a>
+                <a href="blog.html" class="block px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-pink-50 dark:hover:bg-gray-700 font-medium mt-1">وبلاگ</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-pink-300 via-purple-200 to-blue-300 dark:from-pink-900/50 dark:via-purple-900/50 dark:to-blue-900/50"></div>
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.2"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
+            <div class="container mx-auto px-4 py-20 relative">
+                <div class="text-center max-w-3xl mx-auto animate-fade-in">
+                    <h1 class="text-4xl md:text-6xl font-bold text-gray-800 dark:text-white mb-6 drop-shadow-lg">
+                        به <span class="bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">مینی شاپ</span> خوش آمدید
+                    </h1>
+                    <p class="text-xl text-gray-700 dark:text-gray-200 mb-8">بهترین لباس و اکسسوری مردانه با بهترین قیمت - استایل منحصر به فرد شما</p>
+                    <a href="#products" class="inline-block bg-gradient-to-r from-pink-500 to-blue-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl shadow-pink-300/50 hover:shadow-2xl hover:scale-105 transition-all duration-300 animate-float">
+                        مشاهده محصولات 👕
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="container mx-auto px-4 py-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4 animate-slide-up">محصولات ما</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-pink-400 to-blue-400 mx-auto rounded-full"></div>
+            </div>
+            
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Products will be loaded by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center p-6 rounded-2xl bg-gradient-to-br from-pink-100 to-pink-50 dark:from-pink-900/30 dark:to-pink-800/20 hover:scale-105 transition-transform duration-300 shadow-lg shadow-pink-100">
+                        <div class="w-16 h-16 bg-gradient-to-br from-pink-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl shadow-lg">🚚</div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">ارسال رایگان</h3>
+                        <p class="text-gray-600 dark:text-gray-400">برای خریدهای بالای ۵۰۰ هزار تومان</p>
+                    </div>
+                    <div class="text-center p-6 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-50 dark:from-blue-900/30 dark:to-blue-800/20 hover:scale-105 transition-transform duration-300 shadow-lg shadow-blue-100">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl shadow-lg">✅</div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">ضمانت کیفیت</h3>
+                        <p class="text-gray-600 dark:text-gray-400">تمامی محصولات با کیفیت تضمین شده</p>
+                    </div>
+                    <div class="text-center p-6 rounded-2xl bg-gradient-to-br from-purple-100 to-purple-50 dark:from-purple-900/30 dark:to-purple-800/20 hover:scale-105 transition-transform duration-300 shadow-lg shadow-purple-100">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl shadow-lg">🔄</div>
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">۷ روز ضمانت بازگشت</h3>
+                        <p class="text-gray-600 dark:text-gray-400">در صورت عدم رضایت</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-pink-100 to-blue-100 dark:from-gray-900 dark:to-gray-800 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-pink-400 to-blue-400 rounded-xl flex items-center justify-center">
+                            <span class="text-white text-xl font-bold">👔</span>
+                        </div>
+                        <span class="text-2xl font-bold bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">مینی شاپ</span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400">فروشگاه لباس و اکسسوری مردانه با بهترین کیفیت و قیمت</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-gray-800 dark:text-white">لینک‌های سریع</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-600 dark:text-gray-400 hover:text-pink-500 transition-colors">خانه</a></li>
+                        <li><a href="index.html#products" class="text-gray-600 dark:text-gray-400 hover:text-pink-500 transition-colors">محصولات</a></li>
+                        <li><a href="cart.html" class="text-gray-600 dark:text-gray-400 hover:text-pink-500 transition-colors">سبد خرید</a></li>
+                        <li><a href="blog.html" class="text-gray-600 dark:text-gray-400 hover:text-pink-500 transition-colors">وبلاگ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-gray-800 dark:text-white">تماس با ما</h4>
+                    <ul class="space-y-2 text-gray-600 dark:text-gray-400">
+                        <li>📧 info@ministyle.com</li>
+                        <li>📱 ۰۲۱-۱۲۳۴۵۶۷۸</li>
+                        <li>📍 تهران، خیابان انقلاب</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-gray-800 dark:text-white">ما را دنبال کنید</h4>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-10 h-10 bg-gradient-to-br from-pink-400 to-pink-500 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform">📘</a>
+                        <a href="#" class="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-500 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform">📸</a>
+                        <a href="#" class="w-10 h-10 bg-gradient-to-br from-purple-400 to-purple-500 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform">🐦</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-pink-200 dark:border-gray-700 mt-8 pt-8 text-center text-gray-600 dark:text-gray-400">
+                <p>تمامی حقوق محفوظ است © ۲۰۲۴ مینی شاپ</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-4 left-4 bg-gradient-to-r from-pink-500 to-blue-500 text-white px-6 py-3 rounded-lg shadow-xl transform translate-y-20 opacity-0 transition-all duration-300 z-50">
+        <span id="toast-message">محصول به سبد خرید اضافه شد!</span>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
